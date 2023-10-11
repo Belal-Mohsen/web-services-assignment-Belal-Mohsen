@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GiftsCard = () => {
+const GiftsCard = ({gift}) => {
   return (
     <div>GiftsCard</div>
   )
