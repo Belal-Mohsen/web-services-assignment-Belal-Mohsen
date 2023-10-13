@@ -13,10 +13,10 @@ function App() {
       try {
         const giftsResponse = await axios.get('http://localhost:5000/api/gifts');
         setGifts(giftsResponse.data);
+        console.log(giftsResponse.data)
 
         const plantsResponse = await axios.get('http://localhost:5000/api/plants');
         setPlants(plantsResponse.data.data);
-        console.log(plants)
 
         setIsLoading(false);
       } catch (error) {
