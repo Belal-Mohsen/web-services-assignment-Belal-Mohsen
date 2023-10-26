@@ -10,9 +10,9 @@ const PlantsCard = ({plant}) => {
       />
       <div className="p-4">
         <h2 className="text-xl font-bold text-gray-800">{plant.common_name}</h2>
-        <p className="text-sm  text-gray-600"><p className='font-semibold inline-block'>Scientific Name:</p> {plant.scientific_name}</p>
-        <p className="text-sm text-gray-600"><p className='font-semibold inline-block'>Cycle:</p> {plant.cycle}</p>
-        <p className="text-sm text-gray-600"><p className='font-semibold inline-block'>Watering:</p> {plant.watering}</p>
+        <p className="text-sm  text-gray-600"><span className='font-semibold inline-block'>Scientific Name:</span> {plant.scientific_name}</p>
+        <p className="text-sm text-gray-600"><span className='font-semibold inline-block'>Cycle:</span> {plant.cycle}</p>
+        <p className="text-sm text-gray-600"><span className='font-semibold inline-block'>Watering:</span> {plant.watering}</p>
       </div>
     </div>
   );

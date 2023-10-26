@@ -4,6 +4,7 @@ import GiftsCard from './Components/GiftsCard';
 import PlantsCard from './Components/PlantsCard';
 import NavBar from './Components/NavBar';
 import Footer from './Components/Footer';
+import Spinner from './Components/Spinner';
 
 function App() {
   const [gifts, setGifts] = useState([]);
@@ -30,24 +31,26 @@ function App() {
   }, []);
 
   return (
-    <div className="">
-    <NavBar/>
+    <div className="min-h-screen flex flex-col">
+      <NavBar />
       {isLoading ? (
-        <p>Loading...</p>
+        <div className="flex-1 flex justify-center items-center">
+          <Spinner />
+        </div>
       ) : (
         <>
-        <div className='p-5 font-semibold'>
-          <h1>Our Gifts Section:</h1>
+          <div className="p-5 font-semibold">
+            <h1>Our Gifts Section:</h1>
           </div>
-          <div className='flex flex-col md:flex-row flex-wrap justify-center items-center'>
+          <div className="flex flex-col md:flex-row flex-wrap justify-center items-center">
             {gifts.slice(0, 7).map((gift, index) => (
               <div key={index} className="">
                 <GiftsCard gift={gift} />
               </div>
             ))}
           </div>
-          <div className='p-5 font-semibold'>
-          <h1>Our Plants Section</h1>
+          <div className="p-5 font-semibold">
+            <h1>Our Plants Section</h1>
           </div>
           <div className="flex flex-col md:flex-row flex-wrap justify-center items-center">
             {plants.slice(0, 7).map((plant, index) => (
@@ -58,7 +61,7 @@ function App() {
           </div>
         </>
       )}
-      <Footer/>
+      <Footer className="fixed bottom-0 w-full" />
     </div>
   );
 }
