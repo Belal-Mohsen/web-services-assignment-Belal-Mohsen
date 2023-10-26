@@ -9,7 +9,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-gray-100 p-4 flex justify-between items-center sticky top-0">
+    <nav className="bg-gray-100 p-4 flex justify-between items-center sticky top-0 shadow-lg z-10">
       <div className="flex items-center">
         {!isMenuOpen && (
           <h2 className="text-xl font-semibold">Gift Shop</h2>

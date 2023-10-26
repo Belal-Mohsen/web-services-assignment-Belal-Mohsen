@@ -44,7 +44,7 @@ function App() {
           </div>
           <div className="flex flex-col md:flex-row flex-wrap justify-center items-center">
             {gifts.slice(0, 7).map((gift, index) => (
-              <div key={index} className="">
+              <div key={index} className="transform hover:scale-105 transition-transform ease-in-out duration-300">
                 <GiftsCard gift={gift} />
               </div>
             ))}
@@ -54,7 +54,7 @@ function App() {
           </div>
           <div className="flex flex-col md:flex-row flex-wrap justify-center items-center">
             {plants.slice(0, 7).map((plant, index) => (
-              <div key={index}>
+              <div key={index} className="transform hover:scale-105 transition-transform ease-in-out duration-300">
                 <PlantsCard plant={plant} />
               </div>
             ))}
