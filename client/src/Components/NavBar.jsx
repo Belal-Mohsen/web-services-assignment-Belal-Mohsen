@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { BsList, BsX } from 'react-icons/bs';
 
+
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

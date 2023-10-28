@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import {IoMdAddCircle} from 'react-icons/io';
 
-const PlantsCard = ({plant}) => {
+const PlantsCard = ({plant, onAddToCart}) => {
   return (
     <div className="bg-white shadow-lg rounded-lg overflow-hidden m-4 w-64 h-full">
       <img
@@ -13,6 +14,9 @@ const PlantsCard = ({plant}) => {
         <p className="text-sm  text-gray-600"><span className='font-semibold inline-block'>Scientific Name:</span> {plant.scientific_name}</p>
         <p className="text-sm text-gray-600"><span className='font-semibold inline-block'>Cycle:</span> {plant.cycle}</p>
         <p className="text-sm text-gray-600"><span className='font-semibold inline-block'>Watering:</span> {plant.watering}</p>
+        <button onClick={() => onAddToCart(plant)} className="absolute bottom-3 right-3 p-2 rounded-full text-black">
+        <IoMdAddCircle size={28}/>
+      </button>
       </div>
     </div>
   );
