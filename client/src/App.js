@@ -20,10 +20,10 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const giftsResponse = await axios.get('http://localhost:5000/api/gifts');
+        const giftsResponse = await axios.get('api/gifts');
         setGifts(giftsResponse.data);
 
-        const plantsResponse = await axios.get('http://localhost:5000/api/plants');
+        const plantsResponse = await axios.get('api/plants');
         setPlants(plantsResponse.data.data);
 
         setIsLoading(false);
